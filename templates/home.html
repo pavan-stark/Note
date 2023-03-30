@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <h1>Notes</h1>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+
+    <title>Notes</title>
+</head>
+<body>
+    <form action="">
+        <div style="text-align:center">
+            <input type="text" name="note" placeholder="Enter a note">
+            <button>Add Note</button>
+        <img src= "https://www.jobvacancyresult.com/storage/company/1976_innomatics.png"
+        alt="centred-image"
+        style="width:50%">
+        </div>
+        </div>
+    
+    <div>
+        <h2>Entered Notes</h2>
+        <ul>
+            {% for note in notes%}
+                {% if note == None %}
+                {% else %}
+                    <li>{{ note }}</li>
+                {% endif %}
+        
+            {% endfor %}
+        </ul>
+    </div>
+    
+</body>
+</html>
